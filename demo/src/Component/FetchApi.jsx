@@ -1,4 +1,3 @@
-
 import useFetch from "./useFetch";
 
 function Todos() {
@@ -6,10 +5,10 @@ function Todos() {
 
     return (
         <>
-            {data.map((todo) => (return(<>
+            {data.map((todo) => (
                 <p key={todo.id}>{todo.todo}</p>
-            </>))}
-        </>)
+            ))}
+        </>
     );
 }
 
