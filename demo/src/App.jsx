@@ -1,14 +1,14 @@
 
 import './App.css'
-import { Fetchdata } from './Component/Hook2';
-import Effect from './Component/Hook2.1';
+import Holi from './Component/Hook2.2';
+
 
 function App() {
   
  return (
 <>
 <h1>Hello from App.jsx</h1>
-<Effect></Effect>
+<Holi></Holi>
 </>
 )
 }
