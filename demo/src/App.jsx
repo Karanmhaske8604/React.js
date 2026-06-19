@@ -1,6 +1,6 @@
 
 import './App.css'
-import Counter from './Component/FetchData';
+import Todos from './Component/FetchApi';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
  return (
 <>
 <h1>Hello from App.jsx</h1>
-<Counter></Counter>
+<Todos></Todos>
 </>
 )
 }
