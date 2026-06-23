@@ -7,6 +7,7 @@ function EmiCalculator()
     let[time,settime]=useState("");
     let[emi,setemi]=useState(0);
     let[totalamount,settotalamount]=useState();
+    let[totalinterest,settotalinterest]=useState();
 
     function calculate(){
 
@@ -16,9 +17,11 @@ function EmiCalculator()
 
         const emiValue=(P * R * Math.pow(1+R,N))/(Math.pow(1+R,N)-1);
         const totalpay=emiValue * N;
+        const totalinterest=totalpay - P;
 
         setemi(emiValue.toFixed(2));
         settotalamount(totalpay.toFixed(2));
+        settotalinterest(totalinterest.toFixed(2));
     }
 
 
@@ -48,6 +51,7 @@ function EmiCalculator()
         <button onClick={calculate}>Emi Calculate</button>
         <h2>Monthly EMi:{emi}</h2>
         <h2>TotalAmount:{totalamount}</h2>
+        <h2>TotalInterest:{totalinterest}</h2>
 
     </>);
 }
