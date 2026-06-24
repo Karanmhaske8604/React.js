@@ -1,25 +1,21 @@
 import './App.css'
-import Suma from './Component/ContextApi1';
-import { Puma } from './ContextApi3';
-import { namecontext } from './Component/ContextApi2';
+import { themeContext } from './Component/ContextApi4';
+import { Navbar } from './Component/ContextApi4.1';
+
 
 
 function App() {
-  
+  let theme="Dark";
   
   return (<>
 <h1>App.jsx File page</h1>
+<themeContext.Provider value={theme}>
+    <Navbar></Navbar>
+</themeContext.Provider>
 
-<namecontext> 
-    <Suma></Suma>
-    <namecontext.Provider value="Salaar">
-        <Puma></Puma>
-    </namecontext.Provider>
-    
-</namecontext>
 
 
 </>)
 }
 export default App;
-export {namecontext};
+export {Navbar};
